@@ -1,17 +1,21 @@
 import { Schema, model } from 'mongoose'
 
 const ProductSchema = new Schema({
+  image: {
+    type: String,
+    required: [true, 'El producto debe tener una imágen.']
+  },
   brand: {
     type: String,
-    required: [true, 'El nombre es de la marca es obligatorio.']
+    required: [true, 'La marca es obligatorio.']
   },
   model: {
     type: String,
-    required: [true, 'El nombre es del model es obligatorio.']
+    required: [true, 'El modelo es obligatorio.']
   },
   price: {
-    type: String,
-    required: [true, 'El precio.']
+    type: Number,
+    required: [true, 'El precio es obligatorio.']
   },
   cpu: {
     type: String,
@@ -30,7 +34,7 @@ const ProductSchema = new Schema({
     required: [true, 'La resolución obligatoria.']
   },
   battery: {
-    type: String,
+    type: Number,
     required: [true, 'La capacidad de la batería es obligatoria.']
   },
   dimensions: {
@@ -38,8 +42,20 @@ const ProductSchema = new Schema({
     required: [true, 'Las dimensiones son obligatorias.']
   },
   weight: {
-    type: String,
+    type: Number,
     required: [true, 'El peso es obligatorio.']
+  },
+  cameras: {
+    type: Number,
+    default: 1
+  },
+  storage: {
+    type: [String],
+    required: [true, 'Debes introducir capacidades para el dispositivo.']
+  },
+  colors: {
+    type: [String],
+    required: [true, 'Debes introducir colores para el dispositivo.']
   }
 })
 
