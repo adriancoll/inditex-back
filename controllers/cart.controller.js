@@ -1,9 +1,20 @@
 import { response, request } from 'express'
-import responses from '../helpers/api-responses.js'
+import { error, success } from '../helpers/api-responses.js'
+import { Product } from '../models/product.entity.js'
 
-export const addProductToCart = (req = request, res = response) => {
+export const addProductToCart = async (req = request, res = response) => {
   const { body } = req
-  // const {} = body
+  const { id, colorCode, storageCode } = body
 
-  return res.json(responses.success({ text: 'Update cart', body }))
+  const productFound = await Product.findById(id)
+
+
+  const isValid =
+    productFound &&
+    productFound?.colors[colorCode] &&
+    productFound?.storage[storageCode]
+
+  if (!isValid) return res.json(error('No se ha podido añadir al carrito el producto indicado...'))
+
+  return res.json(success(`${productFound.model}, añadido al carrito.`))
 }
