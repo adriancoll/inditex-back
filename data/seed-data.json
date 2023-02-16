@@ -13,7 +13,7 @@
       "weight": 205,
       "image": "https://specifications-pro.com/wp-content/uploads/2020/03/iPhone-9-600x600.jpeg",
       "cameras": 1,
-      "colors": ["Silver", "space grey", "gold", "red"],
+      "colors": ["plata", "gris espacio", "oro", "rojo"],
       "storage": [64, 128, 256]
     },
     {
@@ -29,7 +29,7 @@
       "price": 450,
       "image": "https://specifications-pro.com/wp-content/uploads/2022/11/vivo-V27-Pro-600x600.jpg",
       "cameras": 2,
-      "colors": ["black", "green"],
+      "colors": ["negro", "verde"],
       "storage": [128, 256]
     },
     {
@@ -45,11 +45,11 @@
       "price": 165,
       "image": "https://specifications-pro.com/wp-content/uploads/2023/01/Honor-Magic-5-Lite-5G-600x600.jpg",
       "cameras": 2,
-      "colors": ["green", "black", "silver"],
+      "colors": ["verde", "negro", "plata"],
       "storage": [128]
     },
     {
-      "brand": "Xiami",
+      "brand": "Xiaomi",
       "model": "Poco X6",
       "os": "Android 13",
       "ram": "6-8",
@@ -61,7 +61,7 @@
       "price": 165,
       "image": "https://specifications-pro.com/wp-content/uploads/2023/02/Xiaomi-Poco-X6-600x600.jpeg",
       "cameras": 3,
-      "colors": ["white", "black", "blue"],
+      "colors": ["blanco", "negro", "azul"],
       "storage": [128, 256]
     },
     {
@@ -77,7 +77,7 @@
       "price": 1480,
       "image": "https://specifications-pro.com/wp-content/uploads/2023/02/Sony-Xperia-1-V-600x600.jpg",
       "cameras": 4,
-      "colors": ["black", "white", "purple"],
+      "colors": ["negro", "blanco", "morado"],
       "storage": [256, 512]
     },
     {
@@ -93,7 +93,7 @@
       "price": 966,
       "image": "https://specifications-pro.com/wp-content/uploads/2022/08/Asus-ROG-Phone-6D-Ultimate-600x600.jpg",
       "cameras": 3,
-      "colors": ["grey"],
+      "colors": ["gris"],
       "storage": [512]
     },
     {
@@ -109,7 +109,7 @@
       "price": 850,
       "image": "https://specifications-pro.com/wp-content/uploads/2022/09/Oppo-Find-X6-600x600.jpg",
       "cameras": 3,
-      "colors": ["black", "white"],
+      "colors": ["negro", "Blanco"],
       "storage": [256]
     },
     {
@@ -126,7 +126,7 @@
       "image": "https://specifications-pro.com/wp-content/uploads/2022/09/iPhone-14-Pro-Max-600x600.jpg",
       "cameras": 4,
       "storage": [128, 256, 512, 1000],
-      "colors": ["Dark purple", "gold", "black", "silver"]
+      "colors": ["morado oscuro", "oro", "negro", "plata"]
     }
   ]
 }
