@@ -12,7 +12,7 @@ export class Server {
   cartPath = '/api/cart'
   seedPath = '/api/seed'
 
-  constructor () {
+  constructor() {
     this.app = express()
     this.port = process.env.PORT
 
@@ -25,11 +25,11 @@ export class Server {
     this.routes()
   }
 
-  async conectarDB () {
+  async conectarDB() {
     await dbConnection()
   }
 
-  middlewares () {
+  middlewares() {
     // Política de CORS
     this.app.use(cors())
 
@@ -37,13 +37,13 @@ export class Server {
     this.app.use(express.json())
   }
 
-  routes () {
+  routes() {
     this.app.use(this.productPath, productsRouter)
     this.app.use(this.cartPath, cartRouter)
     this.app.use(this.seedPath, seedRouter)
   }
 
-  listen () {
+  listen() {
     this.app.listen(this.port, () => {
       console.log(`Servidor corriendo en puerto ${this.port}`)
     })

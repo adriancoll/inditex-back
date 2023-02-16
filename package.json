@@ -12,7 +12,7 @@
     "format:write": "prettier --write .",
     "lint:check": "eslint .",
     "lint:fix": "eslint --fix .",
-    "lint:full": "npm run format:write && npm run format:check && npm run lint:fix && npm run lint:check"
+    "lint": "npm run format:write && npm run format:check && npm run lint:fix && npm run lint:check"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +25,7 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-validator": "^6.14.3",
-    "mongoose": "^6.9.1"
+    "mongoose": "^6.9.1",
+    "prettier": "^2.8.4"
   }
 }
