@@ -16,5 +16,5 @@ export const addProductToCart = async (req = request, res = response) => {
 
   if (!isValid) return res.json(error('No se ha podido añadir al carrito el producto indicado...'))
 
-  return res.json(success(`${productFound.model}, añadido al carrito.`))
+  return res.json(success(`${productFound.model}, añadido al carrito.`, { count: 1 }))
 }
