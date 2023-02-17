@@ -17,6 +17,22 @@ const ProductSchema = new Schema({
     type: Number,
     required: [true, 'El precio es obligatorio.']
   },
+
+  storage: {
+    type: [String],
+    required: [true, 'Debes introducir capacidades para el dispositivo.']
+  },
+  colors: {
+    type: [String],
+    required: [true, 'Debes introducir colores para el dispositivo.']
+  },
+  specification: {
+    type: Schema.Types.ObjectId,
+    ref: 'Specification',
+  }
+})
+
+const SpecificationSchema = new Schema({
   cpu: {
     type: String,
     required: [true, 'El nombre del CPU es obligatorio.']
@@ -48,15 +64,8 @@ const ProductSchema = new Schema({
   cameras: {
     type: Number,
     default: 1
-  },
-  storage: {
-    type: [String],
-    required: [true, 'Debes introducir capacidades para el dispositivo.']
-  },
-  colors: {
-    type: [String],
-    required: [true, 'Debes introducir colores para el dispositivo.']
   }
 })
 
+export const Specification = model('Specification', SpecificationSchema)
 export const Product = model('Product', ProductSchema)
