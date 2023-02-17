@@ -11,9 +11,9 @@ export const getProducts = async (_req = request, res = response) => {
 }
 
 export const getProductDetail = async (req = request, res = response) => {
-  const { id } = req.params
+  const { slug } = req.params
 
-  const product = await Product.findById(id)
+  const product = await Product.findOne({ slug })
     .populate('specification', '-_id -__v')
     .lean()
 

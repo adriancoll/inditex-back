@@ -35,6 +35,8 @@ export class Server {
 
     // Lectura y parseo del body a JSON
     this.app.use(express.json())
+
+    this.app.use(express.static('public'))
   }
 
   routes() {

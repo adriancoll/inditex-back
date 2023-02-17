@@ -8,6 +8,6 @@ import {
 
 export const productsRouter = Router()
 
-productsRouter.get('/:id', [crudValidator], getProductDetail)
+productsRouter.get('/:slug', [crudValidator], getProductDetail)
 
 productsRouter.get('/', [crudValidator], getProducts)

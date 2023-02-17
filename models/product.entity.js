@@ -26,9 +26,13 @@ const ProductSchema = new Schema({
     type: [String],
     required: [true, 'Debes introducir colores para el dispositivo.']
   },
+  slug: {
+    type: String,
+    unique: true
+  },
   specification: {
     type: Schema.Types.ObjectId,
-    ref: 'Specification',
+    ref: 'Specification'
   }
 })
 
@@ -65,6 +69,13 @@ const SpecificationSchema = new Schema({
     type: Number,
     default: 1
   }
+})
+
+ProductSchema.pre('save', function (next) {
+  const slug = `${this.brand} ${this.model}`.toLowerCase().split(' ').join('-')
+  this.slug = slug
+
+  next()
 })
 
 export const Specification = model('Specification', SpecificationSchema)
