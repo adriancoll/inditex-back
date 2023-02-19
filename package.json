@@ -7,7 +7,7 @@
   "type": "module",
   "scripts": {
     "start": "nodemon app.js",
-    "test": "cross-env NODE_ENV=test jest --watchAll --testTimeout=10000",
+    "test": "cross-env NODE_ENV=test jest --testTimeout=10000",
     "format:check": "prettier --check .",
     "format:write": "prettier --write .",
     "lint:check": "eslint .",
