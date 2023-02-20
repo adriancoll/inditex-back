@@ -2,14 +2,12 @@ import { request, response } from 'express'
 import { success } from '../helpers/api-responses.js'
 import { Product, Specification } from '../models/product.entity.js'
 
-import { readFileSync } from 'fs';
-import path from 'path';
+import { readFileSync } from 'fs'
+import path from 'path'
 
 export const seedDatabase = async (req = request, res = response) => {
-  const file = path.join(process.cwd(), 'data', 'seed.json');
-  const data = readFileSync(file, 'utf8');
-
-  const { products } = data
+  const file = path.join(process.cwd(), 'data', 'seed.json')
+  const { products } = JSON.parse(readFileSync(file, 'utf8'))
 
   await Product.deleteMany()
   await Specification.deleteMany()
